@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cpurserpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpurserpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: cpurserpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cpurserpipelinesjavascriptdocker 
+          image: pro690a2reg.azurecr.io/cpurserpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
